@@ -1,0 +1,79 @@
+/* Theme-specific fixes for text visibility */
+
+/* Default theme has light hero background, so text should be dark */
+[data-theme="default"] .hero-themed {
+  color: #1a202c !important; /* Dark text */
+  background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec) !important; /* Soft blue-gray gradient */
+}
+
+[data-theme="default"] .hero-themed *:not(.text-primary):not(.bg-primary):not([class*="bg-primary"]) {
+  color: #1a202c !important; /* Dark text */
+}
+
+/* Dark theme has dark hero background, so text should be white */
+[data-theme="dark"] .hero-themed {
+  color: white !important;
+  background: linear-gradient(to bottom right, #1a1a2e, #16213e) !important; /* Dark blue gradient */
+}
+
+[data-theme="dark"] .hero-themed *:not(.text-primary):not(.bg-primary):not([class*="bg-primary"]) {
+  color: white !important;
+}
+
+/* Purple, green, and blue themes have lighter hero backgrounds, so text should be dark */
+[data-theme="purple"] .hero-themed,
+[data-theme="green"] .hero-themed,
+[data-theme="blue"] .hero-themed {
+  color: #1a202c !important; /* dark gray */
+}
+
+[data-theme="purple"] .hero-themed *:not(.text-primary):not(.bg-primary):not([class*="bg-primary"]),
+[data-theme="green"] .hero-themed *:not(.text-primary):not(.bg-primary):not([class*="bg-primary"]),
+[data-theme="blue"] .hero-themed *:not(.text-primary):not(.bg-primary):not([class*="bg-primary"]) {
+  color: #1a202c !important; /* dark gray */
+}
+
+/* Make sure input text is visible */
+[data-theme="default"] .hero-themed input::placeholder {
+  color: rgba(26, 32, 44, 0.7); /* Dark placeholder text with opacity */
+}
+
+[data-theme="dark"] .hero-themed input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light placeholder text with opacity */
+}
+
+[data-theme="purple"] .hero-themed input::placeholder,
+[data-theme="green"] .hero-themed input::placeholder,
+[data-theme="blue"] .hero-themed input::placeholder {
+  color: rgba(26, 32, 44, 0.7); /* dark gray with opacity */
+}
+
+/* Fix for hero section button in default theme */
+[data-theme="default"] .hero-themed .button-primary-themed {
+  background-color: #4a5568 !important; /* Darker button for contrast */
+  color: white !important;
+}
+
+[data-theme="default"] .hero-themed .button-primary-themed:hover {
+  background-color: #2d3748 !important;
+}
+
+/* Fix for company names in default theme */
+[data-theme="default"] .hero-themed .text-2xl.font-bold {
+  color: #2d3748 !important;
+}
+
+/* Fix for footer in default theme */
+[data-theme="default"] .footer-themed {
+  background-color: #f0f4f8 !important;
+  color: #2d3748 !important;
+}
+
+[data-theme="default"] .footer-themed * {
+  color: #2d3748 !important;
+}
+
+[data-theme="default"] .text-theme-footer-text,
+[data-theme="default"] .text-theme-footer-text\/75 {
+  color: #2d3748 !important;
+}
