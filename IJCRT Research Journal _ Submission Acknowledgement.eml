@@ -1,0 +1,140 @@
+Delivered-To: anurag.thkr009@gmail.com
+Received: by 2002:a05:7300:fb8c:b0:2d2:adb9:72b5 with SMTP id aj12csp4927358dyc;
+        Sat, 25 Apr 2026 06:01:17 -0700 (PDT)
+X-Received: by 2002:a17:90b:164a:b0:35f:b572:ece3 with SMTP id 98e67ed59e1d1-361403bd001mr36813990a91.6.1777122077721;
+        Sat, 25 Apr 2026 06:01:17 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1777122077; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=gYPGqcqZ6v+5lpWMkDVH+YuQkld8FoCiAvruTOPxZ9onZmF28dp2boYL5J1y85/iI6
+         qS+AQLXqSz+l+Tri/9mtyGje+lzGxOxHo5XDCWQThnJnS+VszrWIqU3N/k8npbooFt2u
+         U5n11dyAKn9YYUEnjv6K5RauuRNMoe+O+A4L60hmYopCIWLz2UUTMnbHpuzx9i7rSmQo
+         D06+9hxtvPqrS3AR/tqgnJfCrzxkMUPoJONu9PUn4g+6hyXbQOzwtX+WONKm4xkLjqmY
+         1lMjR2ZjNEQyQyMQssu6eXDHRteVjRifN5vm+9Gr6byIuTCxZWgVMCmHbhhcRO9+Qnt9
+         Ue+g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:date:mime-version:message-id:subject:to
+         :from:dkim-signature;
+        bh=ISOwfUW4pvyOzn6wmtiDL4G/Qj/08CBtINnewI8ii5I=;
+        fh=q0UQLqLkYdMoNekatzj1iOJf/CqoobfEsFt9eygXswg=;
+        b=IasjJAjhjR4fwWUKzlL4IyeJDAxdRk9vRBGNhSoAIokGOTsaWLpqQjvMSglKpYtGVE
+         9TUsrjW085H2JkCCDHB+xdUgTDjCyZIelI/JZ17fKsmJWiNyMrI569/1gvNOGV+hN9oU
+         N5CXu/kQ4X6QbNap+8ZF+0x6B7I8Y+qqtaLK+xt7eKpG4syILE47Z7mVrbF3vRQGEiA5
+         g4qF59iql1E1g0Yi7RuBV68Ilt/QccPwKQksly4ePrEqV8ZvRGCK43LlGbsOc1Iyw6Xf
+         fySYW6H55k2LKgKZ4DXXyZXHJrD1w7BgCumQhEGXFsPOEOpgYQPWIzxbT4plKD5v3Efl
+         cXww==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@ijcrt.org.in header.s=default header.b=DxpxsBS3;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of editor@ijcrt.org.in designates 23.83.218.249 as permitted sender) smtp.mailfrom=editor@ijcrt.org.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ijcrt.org.in
+Return-Path: <editor@ijcrt.org.in>
+Received: from poodle.tulip.relay.mailchannels.net (poodle.tulip.relay.mailchannels.net. [23.83.218.249])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-c79770e2098si43993882a12.325.2026.04.25.06.01.15
+        for <anurag.thkr009@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 25 Apr 2026 06:01:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of editor@ijcrt.org.in designates 23.83.218.249 as permitted sender) client-ip=23.83.218.249;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ijcrt.org.in header.s=default header.b=DxpxsBS3;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of editor@ijcrt.org.in designates 23.83.218.249 as permitted sender) smtp.mailfrom=editor@ijcrt.org.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ijcrt.org.in
+X-Sender-Id: inmotionhosting|x-authuser|iiupor5@ngx367.inmotionhosting.com
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+	by relay.mailchannels.net (Postfix) with ESMTP id 4B1591614C0
+	for <anurag.thkr009@gmail.com>; Sat, 25 Apr 2026 13:01:15 +0000 (UTC)
+Received: from ngx367.inmotionhosting.com (trex-green-9.trex.outbound.svc.cluster.local [100.97.144.153])
+	(Authenticated sender: inmotionhosting)
+	by relay.mailchannels.net (Postfix) with ESMTPA id E0ED7160CB5
+	for <anurag.thkr009@gmail.com>; Sat, 25 Apr 2026 13:01:14 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; d=mailchannels.net; s=arc-2022; cv=none;
+	t=1777122074;
+	b=Jox1ohYwvNgDM4t4TulJI/Smg8SBCY/ZEgV+RT9BEWtlOrvw8lCq+ktqMrsBLPCB65vk2T
+	VLCyA4e9rf5GQprcYo7KQLy2/7K2mF0QtWwFO2Vd8DCJNaDcJF/VKqtuSvP2C3+ldqpdi0
+	ZAkxIiaZwCT1WMR8c3VDU0cZKg9T/0GRFzX7EMVPErwpfrLajL21m2LxND+fEbTszPACCs
+	A1mM+m9klfknt7G9njFWcX2QaEjj0yU7YGqVETO6Yne3GkGhbWDeyNIau2m4cNO278AX8j
+	+EtjQjprxxm/v4+TYqQmAsQN+Xp44A/+f31yXCAufXX1zymdXCJ9crnhplmVtw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net;
+	s=arc-2022; t=1777122074;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:dkim-signature;
+	bh=ISOwfUW4pvyOzn6wmtiDL4G/Qj/08CBtINnewI8ii5I=;
+	b=sB/Y3j4IrpvoRC5llCnP+D4KAdyYNdJX7BngY21AF3DQkl/JwjCHfSoS+wgHXhoHYm2XDA
+	tuvek9nOeJHDXcj9X9oOr5bFm50ZsdN90bB7SIHn1qZ1IA68A1osDcKs7tiBspmah04jB2
+	E53QvOSu0A3Arb8XRCCdG+BKIjNKTKnzS2QrW208l5v2N2zoQWcFgMQF3khRcMmn244pTm
+	tgwwSv6reaNowqM+8teAQ95ufgXlmX6Om7qUgabUDX7i3H56ey0DbaVtK+7X+qcPFL2e1m
+	Jy7idMd+gBNVN2JiLeAq39giZNY6dt6ElKCMoZgTj1sIsdCYF9hX8vQqticcIw==
+ARC-Authentication-Results: i=1;
+	rspamd-55bb47d7db-9dgph;
+	auth=pass smtp.auth=inmotionhosting smtp.mailfrom=editor@ijcrt.org.in
+X-Sender-Id: inmotionhosting|x-authuser|iiupor5@ngx367.inmotionhosting.com
+X-MC-Relay: Neutral
+X-MailChannels-SenderId:
+ inmotionhosting|x-authuser|iiupor5@ngx367.inmotionhosting.com
+X-MailChannels-Auth-Id: inmotionhosting
+X-Relation-Company: 2e0335a64433e0f1_1777122075160_642897814
+X-MC-Loop-Signature: 1777122075160:85481833
+X-MC-Ingress-Time: 1777122075159
+Received: from ngx367.inmotionhosting.com (ngx367.inmotionhosting.com
+ [23.235.219.240])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
+	by 100.97.144.153 (trex/7.1.5);
+	Sat, 25 Apr 2026 13:01:15 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=ijcrt.org.in; s=default; h=Content-Transfer-Encoding:Content-Type:Date:
+	MIME-Version:Message-ID:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=ISOwfUW4pvyOzn6wmtiDL4G/Qj/08CBtINnewI8ii5I=; b=DxpxsBS3Upl1OfKQYcHucrMW8M
+	pVIkd4Z/Wyv0susuhHrgEe3Zrh2dg/3NJlyiCYlNJgvfesF0ZA8MM70ciim4pGUxszrto/uu4IfLU
+	hx8yFwn+g+28cTvBsWolp1UE1lYjbkA8iGNEcog5Fcp2iFgoixAild6Sn5Avhu8KsRWzB8E1AIZjP
+	0GzKmZeap4F/RdFRMlxz/EA41E1R88eL1WPFt1Tqu6uRJIoVgDdVZJf1QRGl85y5A56xxi966vCvv
+	/+4iXKpAWTVd/odHhRvgqFRaxBxaJJReJyCKwtBW2g4oi5+te+VQ5xBS4bVEMxGTIPJ8Q45FN3N/3
+	lXqO2h+g==;
+Received: from iiupor5 (helo=[127.0.0.1])
+	by ngx367.inmotionhosting.com with local-smtp (Exim 4.99.1)
+	(envelope-from <editor@ijcrt.org.in>)
+	id 1wGcdG-00000007HC5-2HaH
+	for anurag.thkr009@gmail.com;
+	Sat, 25 Apr 2026 06:01:14 -0700
+From: Editor-In-Chief <editor@ijcrt.org.in>
+To: Anurag Thakur <anurag.thkr009@gmail.com>
+Subject: IJCRT Research Journal | Submission Acknowledgement
+Message-ID: <62619bc74c9a68b7a8e7072c5547e4cf@ijcrt.org.in>
+MIME-Version: 1.0
+Date: Sat, 25 Apr 2026 13:01:14 +0000
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-AuthUser: iiupor5@ngx367.inmotionhosting.com
+
+<p><strong>Dear =C2=A0Anurag Thakur,</strong><br /><br />Thank you for subm=
+itting the manuscript, "MyColony: Design and Evaluation of a Colony-Based D=
+igital Service Platform" to <em><strong>International Journal of Current Re=
+search and Techniques (IJCRT), </strong></em>your <strong>Manuscript ID is =
+202500267. </strong>With the online journal management system that we are u=
+sing, you will be able to track its progress through the editorial process =
+by logging in to the journal web site:<br /><br />Submission URL: https://w=
+ww.ijcrt.org.in/index.php/ijcrt/dashboard/mySubmissions?workflowSubmissionI=
+d=3D267<br />Username: anurag_thakur005</p>
+<p><br />If you have any ques=
+tions, please contact us. Thank you for considering this journal as a venue=
+ for your work. Looking forward for a fruitful journey together.=C2=A0<br /=
+><br />
+
+<strong>Kind Regards,<br><br>Dr. Peter Smith, Editor-In-Chief,=
+</strong><br>
+International Journal of Current Research and Techniques (I=
+JCRT)<br>
+<strong>E-ISSN: 2349-3194 | P-ISSN: 2348-4446 | UGC Journal No:=
+ 47722</strong><br>
+<strong>Email:</strong> <a href=3D"mailto:editor@ijcr=
+t.org.in" target=3D"_blank" rel=3D"noreferrer noopener">editor@ijcrt.org.in=
+</a> |<strong> Website:</strong> <a href=3D"http://www.ijcrt.org.in" target=
+=3D"_blank" rel=3D"noreferrer noopener">www.ijcrt.org.in</a>=C2=A0| <strong=
+>IF: 7.5</strong>
+
+</p>
